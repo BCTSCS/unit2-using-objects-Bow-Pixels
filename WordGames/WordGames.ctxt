@@ -1,0 +1,17 @@
+#BlueJ class context
+comment0.target=WordGames
+comment1.params=text
+comment1.target=WordGames(java.lang.String)
+comment2.params=
+comment2.target=void\ act()
+comment3.params=insertIdx\ insertText
+comment3.target=java.lang.String\ BananaSplit(int,\ java.lang.String)
+comment4.params=insertChar\ insertText
+comment4.target=java.lang.String\ BananaSplit(char,\ java.lang.String)
+comment5.params=
+comment5.target=java.lang.String\ toString()
+comment6.params=
+comment6.target=java.lang.String\ scramble()
+comment7.params=args
+comment7.target=void\ main(java.lang.String[])
+numComments=8

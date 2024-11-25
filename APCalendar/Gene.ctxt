@@ -1,0 +1,16 @@
+#BlueJ class context
+comment0.target=Gene
+comment0.text=\n\ Write\ a\ description\ of\ class\ Gene\ here.\n\ \n\ @author\ (your\ name)\ \n\ @version\ (a\ version\ number\ or\ a\ date)\n
+comment1.params=dna
+comment1.target=Gene(java.lang.String)
+comment1.text=\n\ Constructor\ for\ objects\ of\ class\ Gene\n
+comment2.params=g\ nucleotide
+comment2.target=int\ countNucleotides(java.lang.String,\ char)
+comment2.text=\n\ An\ example\ of\ a\ method\ -\ replace\ this\ comment\ with\ your\ own\n\ \n\ @param\ \ y\ \ \ a\ sample\ parameter\ for\ a\ method\n\ @return\ \ \ \ \ the\ sum\ of\ x\ and\ y\ \n
+comment3.params=dna\ startIndex
+comment3.target=java.lang.String\ findGenes(java.lang.String,\ int)
+comment4.params=dna
+comment4.target=boolean\ potentialGene(java.lang.String)
+comment5.params=args
+comment5.target=void\ main(java.lang.String[])
+numComments=6

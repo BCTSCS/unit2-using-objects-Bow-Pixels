@@ -32,33 +32,35 @@ public class Gene
         }
         return count;
     }
+    public static int findStopCodons(String genome, int start)
+    {
+        if(genome.substring(start).length() % 3 != 0){
+            return -1;
+        }
+        for(int i = start; i < genome.substring(start).length(); i +=3){
+            if (genome.substring(i, i +3 ).equals("TAA") || genome.substring(i, i +3 ).equals("TAG") || genome.substring(i, i +3 ).equals("TGA")){
+                return i;
+            }
+        }
+    
+        return -1;
+    }
+    
+    
+    
     public static String findGenes(String dna, int startIndex){
-        String genome = dna.substring(startIndex);
-        int endIndex = -1;
-        if(potentialGene(genome)){
-            return genome;
+        int start = 0;
+        for(int i = startIndex; i < dna.substring(startIndex).length(); i +=3){
+            if (dna.substring(i, i+3).equals("ATG")){
+                start = i;
+            }
         }
-        if(genome.contains("ATG") && (dna.contains("TAG")) || (dna.contains("TAA")) || (dna.contains("TGA"))){
-            try{
-                endIndex = genome.indexOf("TAG");
-            }
-            catch(Exception e){
-            }
-            try{
-                endIndex = genome.indexOf("TAA");
-            }
-            catch(Exception e){
-                
-            }
-            try{
-                endIndex = genome.indexOf("TGA");
-            }
-            catch(Exception e){
-                
-            }
-            return genome.substring(genome.indexOf("ATG") + "ATG".length(),endIndex);
+        int end = findStopCodons(dna.substring(start),0);
+        if (end != -1){
+            return dna.substring(start,end);
         }
-        return "";
+        return "No Genes found!";
+        
     }
     public static boolean potentialGene(String dna){
         if(dna.startsWith("ATG")){
